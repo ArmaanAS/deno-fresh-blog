@@ -47,6 +47,9 @@ function readPost(id: string): Post {
   };
 }
 
+// Start timing load time
+const loadStart = performance.now();
+
 // Find all blog posts in the posts directory
 export const posts: Post[] = [...Deno.readDirSync(postsDir)]
   .filter((post) => post.isFile && post.name.endsWith(".md"))
@@ -58,6 +61,10 @@ const postsMap = new Map<string, Post>();
 for (const post of posts) {
   postsMap.set(post.id, post);
 }
+
+// End timing load time
+const elapsed = performance.now() - loadStart;
+console.log(`Loaded ${posts.length} post(s) in ${elapsed.toPrecision(3)}ms`);
 
 /**
  * Get a post by id.
