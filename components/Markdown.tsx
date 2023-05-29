@@ -9,12 +9,13 @@ interface Props extends DivAttrs {
 
 const globalStyles = css({
   "[class^=language-],[class*= language-]": apply`
-      font-mono text-sm text-gray-800 bg-gray-100
-      rounded-md px-4 py-3 border border-gray-200 
-    `,
+    font-mono text-sm text-gray-800 bg-gray-100
+    rounded-md px-4 py-3 border border-gray-200
+    pre-wrap whitespace-pre-wrap
+  `,
   ".language-bash::before": {
     content: '"$ "',
-    "@apply": `text-red-500`
+    "@apply": `text-yellow-500`
   },
   // ".language-bash::after": {
   //   content: '"Copy"',
@@ -37,6 +38,7 @@ const globalStyles = css({
   blockquote: apply`border-l-4 border-yellow-600 pl-4`,
   code: apply`bg-gray-100 rounded-md py-0.5 px-1 mx-0.5`,
   pre: apply`rounded-md`,
+  "pre code": apply`bg-transparent rounded-none py-0 px-0 mx-0`,
   hr: apply`border-gray-200 my-6`,
   table: apply`w-full border-collapse border border-gray-200`,
   th: apply`border border-gray-200 px-4 py-2`,
