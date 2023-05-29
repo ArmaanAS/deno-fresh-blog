@@ -7,7 +7,7 @@ import Date from "../islands/Date.tsx";
 import { Post, getPost } from "../posts.ts";
 
 export const handler: Handlers<Post> = {
-  async GET(_req, ctx) {
+  GET(_req, ctx) {
     const post = getPost(ctx.params.slug);
 
     if (!post) {
