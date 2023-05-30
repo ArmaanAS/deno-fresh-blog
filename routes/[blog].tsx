@@ -8,10 +8,10 @@ import { Post, getPost } from "../posts.ts";
 
 export const handler: Handlers<Post> = {
   GET(_req, ctx) {
-    const post = getPost(ctx.params.slug);
+    const post = getPost(ctx.params.blog);
 
     if (!post) {
-      return new Response("Not found", { status: 404 });
+      return ctx.renderNotFound();
     }
 
     return ctx.render(post);
