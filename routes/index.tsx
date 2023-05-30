@@ -3,6 +3,7 @@ import Footer from "../components/Footer.tsx";
 import Title from "../components/Title.tsx";
 import Counter from "../islands/Counter.tsx";
 import Date from "../islands/Date.tsx";
+import Introduction from "../islands/Introduction.tsx";
 import { getNewPosts } from "../posts.ts";
 
 export default function Home() {
@@ -11,19 +12,16 @@ export default function Home() {
       <Head>
         <title>this.blog</title>
       </Head>
-      <main class="p-4 mx-auto max-w-screen-md">
+      <header class="flex justify-center">
         <Title />
-
-        <p class="text-lg leading-8 mb-8">
-          Welcome to my blog. Here you may find articles on various topics that interest me, such as technology, ... and... I hope you enjoy reading my posts. Don't feel free to leave your comments and feedback but thanks for visiting!
-        </p>
-
-        <Counter start={3} />
+      </header>
+      <main class="flex flex-col justify-center mx-auto p-4 max-w-screen-md">
+        <Introduction />
 
         <section>
           <h2 class="text-4xl font-bold mt-8 mb-6">Posts</h2>
 
-          <div class="">
+          <div class="flex flex-col gap-4">
             {
               getNewPosts().map((post) => (
                 <a
