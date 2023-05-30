@@ -28,7 +28,7 @@ export default function Post(props: PageProps<Post>) {
       <header class="flex flex-col justify-center items-center">
         <Title />
 
-        <h1 class="text-5xl font-bold text-neutral-900 mb-2">{props.data.title}</h1>
+        <h1 class="text-5xl font-bold text-neutral-900 mb-2 text-center">{props.data.title}</h1>
 
         <span class="flex gap-2 text-gray-700">
           <pre><Date date={props.data.date} /></pre>
