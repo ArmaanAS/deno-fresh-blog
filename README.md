@@ -64,4 +64,4 @@ directory and referencing them in the markdown file.
 
 ## License
 
-Deno-Fresh-Blog is licensed under the MIT License.
+Deno-Fresh-Blog is licensed under the [MIT License](./LICENSE).
