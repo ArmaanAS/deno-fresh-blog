@@ -1,3 +1,5 @@
+import { tw } from "twind";
+import { css } from "twind/css";
 import { useState } from "preact/hooks";
 
 const intros = [
@@ -60,6 +62,10 @@ const intros = [
   So go forth, brave adventurer, and claim the riches that await. The journey may have been long, but the reward is worth the wait.`
 ];
 
+const buttonSmall = css({
+  "@apply": "rounded border px-4 py-1 font-semibold text-gray-800 hover:text-yellow-600x hover:bg-yellow-50 hover:border-yellow-400",
+});
+
 export default function Introduction() {
   const [index, setIndex] = useState(Math.random() * intros.length | 0);
 
@@ -73,17 +79,20 @@ export default function Introduction() {
 
   return (
     <section>
-      <pre class="prose pre-wrap whitespace-pre-wrap">{intros[index]}</pre>
-      <div className="flex justify-between my-4">
-        <button
-          onClick={handlePrev}
-          class="rounded border px-2 py-0.5"
-        >Prev</button>
-        <button
-          onClick={handleNext}
-          class="rounded border px-2 py-0.5"
-        >Next</button>
+      <div className="flex justify-between my-4 items-center">
+        <h1 className="text-4xl font-bold inline">Intro</h1>
+        <div class="flex gap-4">
+          <button
+            onClick={handlePrev}
+            class={tw(buttonSmall)}
+          >Prev</button>
+          <button
+            onClick={handleNext}
+            class={tw(buttonSmall)}
+          >Next</button>
+        </div>
       </div>
+      <pre class="prose pre-wrap whitespace-pre-wrap">{intros[index]}</pre>
     </section>
   );
 }
