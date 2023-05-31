@@ -13,7 +13,7 @@ export default function Home() {
         <title>this.blog</title>
       </Head>
       <header class="flex justify-center">
-        <Title />
+        <Title clear />
       </header>
       <main class="flex flex-col justify-center mx-auto p-4 max-w-screen-md">
         <Introduction />

@@ -1,7 +1,12 @@
-export default function Title() {
+import { apply, tw } from "twind";
+
+const roundStyle = `p-4 rounded-full border overflow-hidden shadow-2xl my-8`;
+const clearStyle = `mt-4`;
+
+export default function Title({ clear }: { clear: boolean; }) {
   return (
     <a href="/"
-      class="p-4 rounded-full border overflow-hidden my-8 shadow-2xl">
+      class={tw(clear ? clearStyle : roundStyle)}>
       <img
         src="/logo.svg"
         class="w-36 h-36 mx-auto"
