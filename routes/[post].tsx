@@ -8,7 +8,7 @@ import { Post, getPost } from "../posts.ts";
 
 export const handler: Handlers<Post> = {
   GET(_req, ctx) {
-    const post = getPost(ctx.params.blog);
+    const post = getPost(ctx.params.post);
 
     if (!post) {
       return ctx.renderNotFound();
@@ -22,7 +22,7 @@ export default function Post(props: PageProps<Post>) {
   return (
     <>
       <Head>
-        <title>{props.data.title} — Blog</title>
+        <title>{props.data.title} — this.blog</title>
       </Head>
 
       <header class="flex flex-col justify-center items-center">

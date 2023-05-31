@@ -3,7 +3,7 @@ import { apply, tw } from "twind";
 const roundStyle = `p-4 rounded-full border overflow-hidden shadow-2xl my-8`;
 const clearStyle = `mt-4`;
 
-export default function Title({ clear }: { clear: boolean; }) {
+export default function Title({ clear = false }: { clear: boolean; }) {
   return (
     <a href="/"
       class={tw(clear ? clearStyle : roundStyle)}>
