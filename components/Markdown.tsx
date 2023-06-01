@@ -2,6 +2,7 @@ import { JSX } from 'preact/jsx-runtime';
 import { CSS, KATEX_CSS, render } from "$gfm";
 import { Head } from "$fresh/runtime.ts";
 import { apply, css, tw } from 'twind/css';
+import { yellow } from 'twind/colors';
 
 import "prismjs/components/prism-jsx?no-check&pin=v57";
 import "prismjs/components/prism-typescript?no-check&pin=v57";
@@ -23,6 +24,14 @@ const markdownStyles = css({
   "a:not([href^=\"#\"])": apply`text-gray-900 border-b border-yellow-500 
     hover:border-b-2 hover:no-underline font-semibold
   `,
+  ".highlight-source-bash pre::before": {
+    content: '"$ "',
+    "@apply": "text-yellow-600"
+  },
+  p: apply`leading-7`,
+  blockquote: {
+    borderLeftColor: yellow[400] + " !important"
+  }
 });
 
 export default function Markdown(props: Props) {
