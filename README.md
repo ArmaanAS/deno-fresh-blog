@@ -31,7 +31,7 @@ This will run the app on `http://localhost:8000`
 ## Technologies
 
 - [Fresh Framework](https://deno.land/x/fresh) - Simple Router-based web
-  framework
+  framework built on [Preact](https://preactjs.com)
 - [Twind](https://twind.dev/) - Tailwind CSS config for Deno
 - [Marky](https://deno.land/x/marky) - Markdown parser
 - [Deno Deploy](https://deno.com/deploy) - Serverless hosting
