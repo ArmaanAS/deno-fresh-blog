@@ -63,7 +63,7 @@ const intros = [
 ];
 
 const buttonSmall = css({
-  "@apply": "rounded border px-4 py-1 font-semibold text-gray-800 hover:text-yellow-600x hover:bg-yellow-50 hover:border-yellow-400",
+  "@apply": "roundedx border px-4 py-1 font-semibold text-gray-800 hover:text-yellow-600x hover:bg-yellow-50 hover:border-yellow-400",
 });
 
 export default function Introduction() {
@@ -81,14 +81,14 @@ export default function Introduction() {
     <section>
       <div className="flex justify-between my-4 items-center">
         <h1 className="text-4xl font-bold inline">Intro</h1>
-        <div class="flex gap-4">
+        <div class="flex">
           <button
             onClick={handlePrev}
-            class={tw(buttonSmall)}
+            class={tw(buttonSmall) + " rounded-l-full"}
           >Prev</button>
           <button
             onClick={handleNext}
-            class={tw(buttonSmall)}
+            class={tw(buttonSmall) + " rounded-r-full"}
           >Next</button>
         </div>
       </div>
