@@ -1,4 +1,4 @@
-import { apply, tw } from "twind";
+import { tw } from "twind";
 
 const roundStyle = `p-4 rounded-full border overflow-hidden shadow-2xl my-8`;
 const clearStyle = `mt-4`;
