@@ -26,7 +26,7 @@ export default function Post(props: PageProps<Post>) {
         <title>{props.data.title} — this.blog</title>
       </Head>
 
-      <header class="flex flex-col justify-center items-center">
+      <header class="flex flex-col justify-center items-center mb-6">
         <Title />
 
         <h1 class="text-5xl font-bold text-neutral-900 mb-2 text-center">{props.data.title}</h1>
@@ -39,7 +39,7 @@ export default function Post(props: PageProps<Post>) {
       </header>
 
       <main class="p-4 mx-auto max-w-screen-md">
-        <Markdown html={props.data.html} class="my-6" />
+        <Markdown body={props.data.body} class="my-6" />
 
         <Posts />
       </main>

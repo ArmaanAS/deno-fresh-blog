@@ -9,6 +9,8 @@
     "twind": "https://esm.sh/twind@0.16.19",
     "twind/": "https://esm.sh/twind@0.16.19/",
     "@twind/preset-typography": "https://esm.sh/@twind/preset-typography@1.0.7",
-    "$std/": "https://deno.land/std@0.187.0/"
+    "$std/": "https://deno.land/std@0.187.0/",
+    "$gfm": "https://deno.land/x/gfm@0.2.3/mod.ts",
+    "prismjs/": "https://esm.sh/prismjs@1.29.0/"
   }
 }

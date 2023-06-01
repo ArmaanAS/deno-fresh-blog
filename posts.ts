@@ -1,5 +1,4 @@
 import { extract } from "$std/front_matter/yaml.ts";
-import { marky } from "https://deno.land/x/marky@v1.1.6/mod.ts";
 
 export interface Post {
   id: string;
@@ -11,7 +10,6 @@ export interface Post {
   // image: string;
   // slug: string;
   body: string;
-  html: string;
 }
 
 // Posts directory
@@ -35,15 +33,12 @@ function readPost(id: string): Post {
 
   const date = new Date(data.attrs.date.toString());
 
-  const html = marky(data.body);
-
   return {
     id: id,
     title: data.attrs.title ? data.attrs.title.toString() : "Placeholder title",
     date: date,
     author: data.attrs.author ? data.attrs.author.toString() : "Placeholder author",
     body: data.body,
-    html: html,
   };
 }
 
