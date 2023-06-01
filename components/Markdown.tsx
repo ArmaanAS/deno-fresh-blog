@@ -1,6 +1,7 @@
 import { JSX } from 'preact/jsx-runtime';
 import { CSS, KATEX_CSS, render } from "$gfm";
 import { Head } from "$fresh/runtime.ts";
+import { css, tw } from 'twind/css';
 
 import "prismjs/components/prism-jsx?no-check&pin=v57";
 import "prismjs/components/prism-typescript?no-check&pin=v57";
@@ -15,6 +16,12 @@ interface Props extends DivAttrs {
   body: string;
 }
 
+const markdownStyles = css({
+  "ul li::marker": {
+    content: '"—   "'
+  },
+});
+
 export default function Markdown(props: Props) {
   const html = render(props.body, { allowMath: true, allowIframes: true });
 
@@ -25,8 +32,7 @@ export default function Markdown(props: Props) {
       </Head>
       <div
         dangerouslySetInnerHTML={{ __html: html }}
-        // class={tw(globalStyles) + " markdown-body"}
-        class="markdown-body"
+        class={tw(markdownStyles) + " markdown-body"}
         data-color-mode="auto"
       ></div>
     </>
