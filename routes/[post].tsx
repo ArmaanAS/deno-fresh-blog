@@ -2,6 +2,7 @@ import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import Footer from "../components/Footer.tsx";
 import Markdown from "../components/Markdown.tsx";
+import Posts from "../components/Posts.tsx";
 import Title from "../components/Title.tsx";
 import Date from "../islands/Date.tsx";
 import { Post, getPost } from "../posts.ts";
@@ -39,7 +40,11 @@ export default function Post(props: PageProps<Post>) {
 
       <main class="p-4 mx-auto max-w-screen-md">
         <Markdown html={props.data.html} class="my-6" />
+
+        <Posts />
       </main>
+
+
       <Footer />
     </>
   );
