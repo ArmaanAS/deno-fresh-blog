@@ -14,6 +14,14 @@ In recent years, there has been a surge of interest in artificial intelligence (
 
 Claude Instant is a language model developed by a team of researchers at Microsoft. It is a large-scale generative model that can generate coherent and fluent text across a wide range of domains, including news articles, stories, and technical reports. Claude Instant is based on the Transformer architecture, which is a popular deep learning-based model used for NLP tasks.
 
+<figure>
+  <img src="Claude.webp" />
+  <figcaption>
+  <b>Figure 1.</b> 
+    Claude is an AI assistant developed by Anthropic for conversational and text processing tasks.
+  </figcaption>
+</figure>
+
 ### What is Chat GPT 3.5-turbo?
 
 Chat GPT 3.5-turbo is a language model developed by OpenAI. It is a specialized model designed to generate human-like responses in conversational settings. Chat GPT 3.5-turbo is based on the GPT-3 architecture, which is an advanced deep learning-based model that can perform a wide range of NLP tasks.
@@ -64,6 +72,13 @@ Chat GPT 3.5-turbo, on the other hand, is a more recent addition to the AI lands
 
 One of the main differences between Claude Instant and Chat GPT 3.5-turbo is their training data. Claude Instant was trained on a large dataset of text from the internet, including websites, social media, and news articles. This training data was carefully curated to ensure that the model learned from a diverse range of sources, allowing it to generate responses that are relevant and accurate. Chat GPT 3.5-turbo, on the other hand, was trained on an even larger dataset, which included not only text but also images and videos. This extensive training data allowed Chat GPT 3.5-turbo to learn from a wider range of inputs, making it more versatile and capable of performing a wide range of tasks.
 
+<figure>
+  <img src="chatgpt.webp" />
+  <figcaption>
+    <b>Figure 2.</b> ChatGPT is a friendly AI language model that can communicate in multiple languages.
+  </figcaption>
+</figure>
+
 Another difference between the two models is their approach to context. Claude Instant is designed to be context-aware, meaning that it can generate responses based on the context of the conversation. For example, if a user asks a question about a specific topic, Claude Instant can generate a response that is relevant to that topic. Chat GPT 3.5-turbo, on the other hand, is designed to be context-agnostic, meaning that it can generate responses based purely on the input it receives. While this makes Chat GPT 3.5-turbo more versatile, it can also lead to responses that are less relevant to the conversation.
 
 In terms of performance, both models are highly capable. Claude Instant is known for its ability to generate coherent and relevant responses quickly and accurately, making it ideal for chatbots and virtual assistants. Chat GPT 3.5-turbo, on the other hand, is known for its ability to generate human-like responses to natural language queries, making it ideal for a wide range of tasks, including translation, summarization, and sentiment analysis. However, due to its context-agnostic approach, Chat GPT 3.5-turbo may sometimes generate responses that are less relevant to the conversation.
@@ -77,6 +92,14 @@ On the other hand, if you are looking for a more versatile language model that c
 In conclusion, Claude Instant and Chat GPT 3.5-turbo are both powerful language models that have their own strengths and weaknesses. While Claude Instant is ideal for chatbots and virtual assistants, Chat GPT 3.5-turbo is more versatile, making it better suited for a wider range of natural language processing tasks. Ultimately, the choice between these two models will depend on your specific use case and the type of natural language processing tasks you need to perform.
 
 # By Bing Compose
+
+<figure>
+  <img src="bing.webp" />
+  <figcaption>
+  <b>Figure 3.</b> 
+    Bing Compose is a new beta feature of the Edge desktop browser for writing tasks.
+  </figcaption>
+</figure>
 
 If you are looking for a chatbot that can generate engaging and creative conversations, you might be wondering which one is better: Claude Instant or Chat GPT 3.5-turbo. In this blog post, we will compare these two chatbots based on their features, performance, and user feedback.
 

@@ -19,7 +19,8 @@ interface Props extends DivAttrs {
 
 const markdownStyles = css({
   "ul li::marker": {
-    content: '"—   "'
+    content: '"—   "',
+    color: yellow[600]
   },
   "a:not([href^=\"#\"])": apply`text-gray-900 border-b border-yellow-500 
     hover:border-b-2 hover:no-underline font-semibold
@@ -31,7 +32,10 @@ const markdownStyles = css({
   p: apply`leading-7`,
   blockquote: {
     borderLeftColor: yellow[400] + " !important"
-  }
+  },
+  figure: apply`py-6 px-4 flex flex-col items-center justify-center gap-2`,
+  "figure img": apply`rounded-xl`,
+  "figure figcaption": apply`text-center text-gray-600 font-thin`,
 });
 
 export default function Markdown(props: Props) {
