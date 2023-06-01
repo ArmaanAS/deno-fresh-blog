@@ -20,7 +20,7 @@ export default function Posts() {
                 <span>
                   <span class="text-gray-500 font-thin">By</span> {post.author}
                 </span>
-                <span><Date date={post.date} /></span>
+                <Date date={post.date} class="font-thin text-gray-800" />
               </div>
             </a>
           ))
