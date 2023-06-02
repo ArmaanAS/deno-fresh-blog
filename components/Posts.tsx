@@ -3,7 +3,7 @@ import { getNewPosts } from "../posts.ts";
 
 export default function Posts() {
   return (
-    <section>
+    <section class="text-left">
       <h2 class="text-4xl font-bold mt-8 mb-6">Posts</h2>
 
       <div class="flex flex-col gap-4">

@@ -1,9 +1,6 @@
-import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import Footer from "../components/Footer.tsx";
+import Layout from "../components/Layout.tsx";
 import Markdown from "../components/Markdown.tsx";
-import Posts from "../components/Posts.tsx";
-import Title from "../components/Title.tsx";
 import Date from "../islands/Date.tsx";
 import { Post, getPost } from "../posts.ts";
 
@@ -21,14 +18,8 @@ export const handler: Handlers<Post> = {
 
 export default function Post(props: PageProps<Post>) {
   return (
-    <>
-      <Head>
-        <title>{props.data.title} — this.blog</title>
-      </Head>
-
-      <header class="flex flex-col justify-center items-center mb-6">
-        <Title />
-
+    <Layout pageTitle={props.data.title}>
+      <div class="flex flex-col justify-center items-center mb-6">
         <h1 class="text-5xl font-bold text-neutral-900 mb-2 text-center">
           {props.data.title}
         </h1>
@@ -38,16 +29,9 @@ export default function Post(props: PageProps<Post>) {
           •
           <span><span class="font-thin font-italic mr-1.5">By</span>{props.data.author}</span>
         </span>
-      </header>
+      </div>
 
-      <main class="p-4 mx-auto max-w-screen-md">
-        <Markdown body={props.data.body} class="my-6" />
-
-        <Posts />
-      </main>
-
-
-      <Footer />
-    </>
+      <Markdown body={props.data.body} class="my-6" />
+    </Layout>
   );
 }
