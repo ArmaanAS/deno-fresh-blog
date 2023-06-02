@@ -33,7 +33,7 @@ const markdownStyles = css({
     borderLeftColor: yellow[400] + " !important"
   },
   figure: apply`py-6 px-4 flex flex-col items-center justify-center gap-2`,
-  "figure img": apply`rounded-xl`,
+  "figure img": apply`rounded-xl border-2 border-yellow-50`,
   "figure figcaption": apply`text-center text-gray-600 font-thin`,
   pre: apply`border border-gray-200`,
 });
