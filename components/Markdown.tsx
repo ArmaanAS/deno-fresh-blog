@@ -1,8 +1,8 @@
-import { JSX } from 'preact/jsx-runtime';
 import { CSS, KATEX_CSS, render } from "$gfm";
 import { Head } from "$fresh/runtime.ts";
 import { apply, css, tw } from 'twind/css';
 import { yellow } from 'twind/colors';
+import type { ComponentProps } from 'preact';
 
 import "prismjs/components/prism-jsx?no-check&pin=v57";
 import "prismjs/components/prism-typescript?no-check&pin=v57";
@@ -12,8 +12,7 @@ import "prismjs/components/prism-powershell?no-check&pin=v57";
 import "prismjs/components/prism-json?no-check&pin=v57";
 import "prismjs/components/prism-diff?no-check&pin=v57";
 
-type DivAttrs = JSX.IntrinsicElements["div"];
-interface Props extends DivAttrs {
+interface Props extends ComponentProps<"div"> {
   body: string;
 }
 
@@ -38,8 +37,8 @@ const markdownStyles = css({
   "figure figcaption": apply`text-center text-gray-600 font-thin`,
 });
 
-export default function Markdown(props: Props) {
-  const html = render(props.body, { allowMath: true, allowIframes: true });
+export default function Markdown({ body, ...props }: Props) {
+  const html = render(body, { allowMath: true, allowIframes: true });
 
   return (
     <>
@@ -50,6 +49,7 @@ export default function Markdown(props: Props) {
         dangerouslySetInnerHTML={{ __html: html }}
         class={tw(markdownStyles) + " markdown-body"}
         data-color-mode="auto"
+        {...props}
       ></div>
     </>
   );
