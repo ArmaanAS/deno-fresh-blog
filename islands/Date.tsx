@@ -1,18 +1,22 @@
-import { JSX } from "preact/jsx-runtime";
+import { ComponentProps } from "preact";
 
-type TimeAttrs = JSX.IntrinsicElements["time"];
-interface Props extends TimeAttrs {
+interface Props extends ComponentProps<"time"> {
   date: Date;
+  year?: Intl.DateTimeFormatOptions["year"];
+  month?: Intl.DateTimeFormatOptions["month"];
+  day?: Intl.DateTimeFormatOptions["day"];
 }
 
-export default function Date({ date, ...props }: Props) {
-  return (
-    <time dateTime={`${date}`} {...props}>
-      {new window.Date(date).toLocaleDateString(undefined, {
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-      })}
-    </time>
-  );
-}
+export default ({
+  date,
+  year = "numeric",
+  month = "long",
+  day = "numeric",
+  ...props
+}: Props) => (
+  <time dateTime={`${date}`} {...props}>
+    {new Date(date).toLocaleDateString(undefined, {
+      year, month, day
+    })}
+  </time>
+);
