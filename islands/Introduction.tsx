@@ -92,7 +92,7 @@ export default function Introduction() {
           >Next</button>
         </div>
       </div>
-      <pre class="prose pre-wrap whitespace-pre-wrap font-serif text-lg leading-8">{intros[index]}</pre>
+      <pre class="prose pre-wrap whitespace-pre-wrap font-serif text-lg leading-8 text-gray-700">{intros[index]}</pre>
     </section>
   );
 }
