@@ -1,12 +1,12 @@
 import { tw } from "twind";
 
-const roundStyle = `rounded-full border-2 border-yellow-200 shadow-md`;
-const clearStyle = ``;
+const roundStyle = `my-12 rounded-full border-2 border-yellow-200 shadow-md`;
+const clearStyle = `mt-8`;
 
 export default function Title({ clear = false }: { clear?: boolean; }) {
   return (
     <a href="/"
-      class={tw(clear ? clearStyle : roundStyle) + " p-4 my-12 flex flex-wrap justify-center gap-4 items-center max-w-screen-md"}>
+      class={tw(clear ? clearStyle : roundStyle) + " py-4 px-8 flex flex-wrap justify-center gap-4 items-center max-w-screen-md"}>
       <img
         src="/logo.svg"
         class="w-20 h-20 sm:(w-24 h-24) md:(w-28 h-28) lg:(w-36 h-36) m-auto"
