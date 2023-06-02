@@ -45,7 +45,7 @@ export default function Markdown({
   return (
     <>
       <Head>
-        <style>{CSS}{KATEX_CSS}</style>
+        <style dangerouslySetInnerHTML={{ __html: CSS + KATEX_CSS }} />
       </Head>
       <div
         dangerouslySetInnerHTML={{ __html: html }}
