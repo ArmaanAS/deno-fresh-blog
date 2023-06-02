@@ -37,18 +37,19 @@ const markdownStyles = css({
   "figure figcaption": apply`text-center text-gray-600 font-thin`,
 });
 
-export default function Markdown({ body, ...props }: Props) {
+export default function Markdown({
+  body, class: className = "", ...props
+}: Props) {
   const html = render(body, { allowMath: true, allowIframes: true });
 
   return (
     <>
       <Head>
-        <style dangerouslySetInnerHTML={{ __html: CSS + KATEX_CSS }} />
+        <style>{CSS}{KATEX_CSS}</style>
       </Head>
       <div
         dangerouslySetInnerHTML={{ __html: html }}
-        class={tw(markdownStyles) + " markdown-body"}
-        data-color-mode="auto"
+        class={tw(markdownStyles) + " markdown-body " + className}
         {...props}
       ></div>
     </>
