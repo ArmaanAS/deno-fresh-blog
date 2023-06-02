@@ -10,6 +10,7 @@ export interface Post {
   // image: string;
   // slug: string;
   body: string;
+  cover?: string;
 }
 
 // Posts directory
@@ -39,6 +40,7 @@ function readPost(id: string): Post {
     date: date,
     author: data.attrs.author ? data.attrs.author.toString() : "Placeholder author",
     body: data.body,
+    cover: data.attrs.cover ? data.attrs.cover.toString() : undefined,
   };
 }
 

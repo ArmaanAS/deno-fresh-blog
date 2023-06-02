@@ -16,22 +16,33 @@ export const handler: Handlers<Post> = {
   }
 };
 
-export default function Post(props: PageProps<Post>) {
+export default function Post({ data }: PageProps<Post>) {
   return (
-    <Layout pageTitle={props.data.title}>
+    <Layout pageTitle={data.title}>
       <div class="flex flex-col justify-center items-center mb-6">
+
         <h1 class="text-5xl font-bold text-neutral-900 mb-2 text-center">
-          {props.data.title}
+          {data.title}
         </h1>
 
         <span class="flex gap-2 text-gray-700">
-          <Date date={props.data.date} />
+          <Date date={data.date} />
           •
-          <span><span class="font-thin font-italic mr-1.5">By</span>{props.data.author}</span>
+          <span><span class="font-thin font-italic mr-1.5">By</span>{data.author}</span>
         </span>
+
+        {data.cover && (
+          <img
+            src={data.cover}
+            alt={data.title}
+            class="w-full rounded-xl mt-8"
+            width="1024"
+            height="512"
+          />
+        )}
       </div>
 
-      <Markdown body={props.data.body} class="my-6" />
+      <Markdown body={data.body} class="my-6" />
     </Layout>
   );
 }

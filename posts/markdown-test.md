@@ -2,6 +2,7 @@
 title: Markdown Renderer Demo
 author: deno-gfm
 date: 2023-06-01T14:07:40Z
+cover: cover-camera.webp
 ---
 
 ```JSON
