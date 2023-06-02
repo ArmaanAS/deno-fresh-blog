@@ -35,6 +35,7 @@ const markdownStyles = css({
   figure: apply`py-6 px-4 flex flex-col items-center justify-center gap-2`,
   "figure img": apply`rounded-xl`,
   "figure figcaption": apply`text-center text-gray-600 font-thin`,
+  pre: apply`border border-gray-200`,
 });
 
 export default function Markdown({
